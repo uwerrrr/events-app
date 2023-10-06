@@ -2,9 +2,9 @@
 
 - A full-stack event management via calendar view.
 
-## Current status:
+### Current status:
 
-- In stage 1: developing a frontend with interactive calendar interface
+- In <u>stage 1</u>: developing a frontend with interactive calendar interface
 
 ---
 
@@ -12,9 +12,17 @@
 
 - There will be 3 stages of MVPs:
 
-  1. Create a frontend with interactive calendar interface
-  2. Create a feature to allow user to create and delete event from calendar view
-  3. Create backend to handle requests and manage event database
+  1. Create a frontend with interactive calendar interface.
+
+     Reference to [Events Calendar](https://github.com/nology-tech/aus-post-course-guide/blob/main/projects/events-calendar)
+
+  2. Create a feature to allow user to create and delete event from calendar view.
+
+     Reference to [Events Creator Frontend](https://github.com/nology-tech/aus-post-course-guide/blob/main/projects/events-creator-frontend)
+
+  3. Create backend to handle requests and manage event database.
+
+     Reference to [Events Creator API](https://github.com/nology-tech/aus-post-course-guide/blob/main/projects/events-creator-api)
 
 - Purpose of project
   - Create a functional calendar + event management app
@@ -27,7 +35,7 @@
   - React
   - TypeScript
 
-- Back end: (2nd stage)
+- Back end: (3rd stage)
   - Spring Boot
   - Java
   - Spring Data JPA (for connecting backend to database)
@@ -46,4 +54,4 @@
 
 ## Change logs
 
-### 06/10/2023 - Initiate frontend with vite and typescript
+### 06/10/2023 - Initiate frontend with vite (react) and typescript
