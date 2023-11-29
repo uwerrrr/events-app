@@ -1,17 +1,21 @@
-class SelectedDate {
+class ViewDate {
   // Property
-  selectedDate: Date;
+  viewDate: Date;
   monthStr: string;
   year: number;
+  month: number; // 0-11
 
   // Constructor
-  constructor(selectedDate: Date) {
-    this.selectedDate = selectedDate;
-    this.monthStr = selectedDate.toLocaleDateString("en-US", {
+  constructor(viewDate: Date) {
+    this.viewDate = viewDate;
+    this.viewDate.setDate(1);
+    
+    this.month = viewDate.getMonth();
+    this.monthStr = viewDate.toLocaleDateString("en-US", {
       month: "long",
     });
-    this.year = selectedDate.getUTCFullYear();
+    this.year = viewDate.getUTCFullYear();
   }
 }
 
-export { SelectedDate };
+export { ViewDate };

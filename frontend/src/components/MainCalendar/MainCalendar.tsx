@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { SelectedDate } from "../../scripts/classes";
+import { ViewDate } from "../../scripts/classes";
 import NavButton from "../NavButton/NavButton";
 
 const MainCalendar = () => {
-  const [selectedDate, setSelectedDate] = useState<SelectedDate>(
-    new SelectedDate(new Date())
-  );
+  const [viewDate, setViewDate] = useState<ViewDate>(new ViewDate(new Date()));
 
   useEffect(() => {});
 
@@ -14,9 +12,10 @@ const MainCalendar = () => {
       <div>Main Calendar</div>
       <h2>
         <NavButton direction={"previous"} />
-        {selectedDate.monthStr} {selectedDate.year}
+        {viewDate.monthStr} {viewDate.year}
         <NavButton direction={"next"} />
       </h2>
+      <div>{/* date cells */}</div>
     </>
   );
 };
