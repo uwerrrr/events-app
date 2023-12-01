@@ -10,8 +10,39 @@ interface MonthGridProps {
 const MonthGrid: React.FC<MonthGridProps> = ({ viewDate }) => {
   const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-  // create 2d array datesArr = [weekindex][dateindex]
-  
+  // create 2d array datesArr = [weekIndex][dayIndex]
+  const daysInWeek = weekdays.length;
+  const weeksInMonthFull = Math.ceil(
+    (viewDate.daysInMonth + viewDate.monthFirstDay) / 7
+  );
+
+  let datesArr: (number | string)[][] = Array.from(
+    { length: weeksInMonthFull },
+    (_) => Array.from({ length: daysInWeek }, (_) => "")
+  );
+
+  let date = 1;
+  datesArr = datesArr.map((week, weekIndex) =>
+    week.map((_, dayIndex) => {
+      if (weekIndex === 0 && dayIndex < viewDate.monthFirstDay) {
+        return "";
+      } else if (date > viewDate.monthLastDate) {
+        return "";
+      } else {
+        const result = date;
+        date++;
+        return result;
+      }
+    })
+  );
+  /* datesArr of Nov 2023
+  0 ["", "", 1, 2, 3, 4, 5] (7)
+  1 [6, 7, 8, 9, 10, 11, 12] (7)
+  2 [13, 14, 15, 16, 17, 18, 19] (7)
+  3 [20, 21, 22, 23, 24, 25, 26] (7)
+  4 [27, 28, 29, 30, "", "", ""] (7) 
+  */
+
   return (
     <div className="month-grid">
       <div className={styles["weekdays"]}>
@@ -21,8 +52,9 @@ const MonthGrid: React.FC<MonthGridProps> = ({ viewDate }) => {
           </div>
         ))}
       </div>
-
-      <DateCell />
+      <div>
+        <DateCell />
+      </div>
     </div>
   );
 };

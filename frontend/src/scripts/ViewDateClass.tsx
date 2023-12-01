@@ -25,7 +25,7 @@ class ViewDate {
     this.year = this.date.getUTCFullYear();
     this.daysInMonth = new Date(this.year, this.month + 1, 0).getDate();
     this.monthLastDate = this.daysInMonth;
-    this.monthFirstDay = new Date(this.year, this.month, 1).getDay() - 1;
+    this.monthFirstDay = new Date(this.year, this.month, 1).getDay() - 1; // we start on monday -> day - 1 -> to set monday = 0
   }
 
   nextMonth() {
