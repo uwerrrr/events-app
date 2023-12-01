@@ -4,7 +4,7 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import style from "./NavButton.module.scss";
-import { ViewDate } from "../../scripts/classes";
+import ViewDate from "../../scripts/ViewDateClass";
 
 interface NavButtonProps {
   direction: "next" | "previous";
@@ -19,7 +19,7 @@ const NavButton: React.FC<NavButtonProps> = ({
 }) => {
   // create newViewDate -> update newViewDate -> set viewDate state
   const handleButtonClick = () => {
-    const newViewDate = new ViewDate(new Date(currViewDate.viewDate));
+    const newViewDate = new ViewDate(new Date(currViewDate.date));
     if (direction === "next") {
       newViewDate.nextMonth();
     } else if (direction === "previous") {

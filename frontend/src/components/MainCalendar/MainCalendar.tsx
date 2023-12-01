@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { ViewDate } from "../../scripts/classes";
+import ViewDate from "../../scripts/ViewDateClass";
 import NavButton from "../NavButton/NavButton";
+import MonthGrid from "./MonthGrid/MonthGrid";
 
 const MainCalendar = () => {
   const [viewDate, setViewDate] = useState<ViewDate>(new ViewDate(new Date()));
@@ -9,7 +10,6 @@ const MainCalendar = () => {
 
   return (
     <>
-      <div>Main Calendar</div>
       <h2>
         <NavButton
           direction={"previous"}
@@ -23,7 +23,7 @@ const MainCalendar = () => {
           setViewDate={setViewDate}
         />
       </h2>
-      <div>{/* date cells */}</div>
+      <MonthGrid viewDate={viewDate} />
     </>
   );
 };
