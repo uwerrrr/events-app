@@ -11,9 +11,17 @@ const MainCalendar = () => {
     <>
       <div>Main Calendar</div>
       <h2>
-        <NavButton direction={"previous"} />
+        <NavButton
+          direction={"previous"}
+          currViewDate={viewDate}
+          setViewDate={setViewDate}
+        />
         {viewDate.monthStr} {viewDate.year}
-        <NavButton direction={"next"} />
+        <NavButton
+          direction={"next"}
+          currViewDate={viewDate}
+          setViewDate={setViewDate}
+        />
       </h2>
       <div>{/* date cells */}</div>
     </>
