@@ -16,7 +16,7 @@ const MonthGrid: React.FC<MonthGridProps> = ({ viewDate }) => {
     (viewDate.daysInMonth + viewDate.monthFirstDay) / 7
   );
 
-  let datesArr: (number | string)[][] = Array.from(
+  let datesArr: ("" | Date)[][] = Array.from(
     { length: weeksInMonthFull },
     (_) => Array.from({ length: daysInWeek }, (_) => "")
   );
@@ -29,7 +29,7 @@ const MonthGrid: React.FC<MonthGridProps> = ({ viewDate }) => {
       } else if (date > viewDate.monthLastDate) {
         return "";
       } else {
-        const result = date;
+        const result = new Date(viewDate.year, viewDate.month, date);
         date++;
         return result;
       }
@@ -53,7 +53,15 @@ const MonthGrid: React.FC<MonthGridProps> = ({ viewDate }) => {
         ))}
       </div>
       <div>
-        <DateCell />
+        <div className={styles["date-grid"]}>
+          {datesArr.map((week, weekIndex) => (
+            <div key={weekIndex} className={styles["week-grid"]}>
+              {week.map((date, dayIndex) => (
+                <DateCell key={dayIndex} date={date} />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

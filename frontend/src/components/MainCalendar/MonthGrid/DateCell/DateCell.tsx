@@ -1,9 +1,9 @@
-import React from 'react'
-
-const DateCell = () => {
-  return (
-    <div>DateCell</div>
-  )
+interface DateCellProps {
+  date: "" | Date;
 }
 
-export default DateCell
+const DateCell: React.FC<DateCellProps> = ({ date }) => {
+  return <div>{date === "" ? "n/a" : date.getDate()}</div>;
+};
+
+export default DateCell;
