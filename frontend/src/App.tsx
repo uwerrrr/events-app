@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import CalendarLoader from "./containers/CalendarLoader/CalendarLoader";
 
 function App() {

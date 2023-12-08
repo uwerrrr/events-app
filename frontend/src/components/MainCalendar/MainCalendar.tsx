@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from "./MainCalendar.module.scss";
 import ViewDate from "../../scripts/ViewDateClass";
 import NavButton from "../NavButton/NavButton";
 import MonthGrid from "./MonthGrid/MonthGrid";
@@ -10,19 +11,20 @@ const MainCalendar = () => {
 
   return (
     <>
-      <h2>
+      <section className={style["selection-section"]}>
         <NavButton
           direction={"previous"}
           currViewDate={viewDate}
           setViewDate={setViewDate}
         />
-        {viewDate.monthStr} {viewDate.year}
+        <span className={style["month-text"]}>{viewDate.monthStr} </span>
+        <span className={style["year-text"]}>{viewDate.year}</span>
         <NavButton
           direction={"next"}
           currViewDate={viewDate}
           setViewDate={setViewDate}
         />
-      </h2>
+      </section>
       <MonthGrid viewDate={viewDate} />
     </>
   );
