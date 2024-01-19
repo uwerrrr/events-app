@@ -1,0 +1,26 @@
+@use "../../../style/theme.scss";
+
+.month-grid {
+  width: 100%;
+}
+
+.weekdays {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.weekday {
+  @include theme.date-cell;
+}
+// .weekday > p {
+//   padding-right: 1vw;
+// }
+
+.date-grid {
+}
+.week-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}

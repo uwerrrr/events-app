@@ -2,6 +2,16 @@ $white: rgb(255, 255, 255);
 $red: rgb(251, 58, 49);
 $purple: rgb(240, 218, 245);
 
-$weekend: rgb(236, 236, 236);
+$weekendBackground: rgb(243, 243, 243);
 $mainText: rgb(39, 39, 39);
 $secondText: rgb(122, 122, 122);
+
+$border: rgb(226, 226, 226);
+
+@mixin date-cell {
+  width: 100%;
+  text-align: end;
+  & > p {
+    padding-right: 1vw;
+  }
+}

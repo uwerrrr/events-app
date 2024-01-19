@@ -48,7 +48,7 @@ const MonthGrid: React.FC<MonthGridProps> = ({ viewDate }) => {
       <div className={styles["weekdays"]}>
         {weekdays.map((weekday, index) => (
           <div key={index} className={styles["weekday"]}>
-            {weekday}
+            <p>{weekday}</p>
           </div>
         ))}
       </div>
