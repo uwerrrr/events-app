@@ -53,9 +53,18 @@
 
 ---
 
+## Screenshots
+
+1. Calendar view
+
+- <img src="./images/CalendarView.png" height="400px" >
+
+---
+
 ## Change logs
 
 ### 10/2023 - Initiate frontend with vite (react) and typescript
 
 ### 01/2024 - Finish MVP1
-  An interactive calendar interface is working 
+
+An interactive calendar interface is working
