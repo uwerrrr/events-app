@@ -54,4 +54,7 @@
 
 ## Change logs
 
-### 06/10/2023 - Initiate frontend with vite (react) and typescript
+### 10/2023 - Initiate frontend with vite (react) and typescript
+
+### 01/2024 - Finish MVP1
+  An interactive calendar interface is working 
