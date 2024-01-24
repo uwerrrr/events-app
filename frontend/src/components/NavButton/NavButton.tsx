@@ -7,36 +7,35 @@ import style from "./NavButton.module.scss";
 import ViewDate from "../../scripts/ViewDateClass";
 
 interface NavButtonProps {
-  direction: "next" | "previous";
+  type: "next" | "previous" | "today";
   currViewDate: ViewDate;
   setViewDate: (newViewDate: ViewDate) => void;
 }
 
 const NavButton: React.FC<NavButtonProps> = ({
-  direction,
+  type,
   currViewDate,
   setViewDate,
 }) => {
   // create newViewDate -> update newViewDate -> set viewDate state
   const handleButtonClick = () => {
-    const newViewDate = new ViewDate(new Date(currViewDate.date));
-    if (direction === "next") {
+    let newViewDate = new ViewDate(new Date(currViewDate.date));
+    if (type === "next") {
       newViewDate.nextMonth();
-    } else if (direction === "previous") {
+    } else if (type === "previous") {
       newViewDate.prevMonth();
+    } else if (type === "today") {
+      newViewDate.setToday();
     }
-
     setViewDate(newViewDate);
   };
 
   return (
     <>
       <button className={style.button} onClick={handleButtonClick}>
-        {direction === "next" ? (
-          <FontAwesomeIcon icon={faChevronRight} />
-        ) : (
-          <FontAwesomeIcon icon={faChevronLeft} />
-        )}
+        {type === "next" && <FontAwesomeIcon icon={faChevronRight} />}
+        {type === "previous" && <FontAwesomeIcon icon={faChevronLeft} />}
+        {type === "today" && "Today"}
       </button>
     </>
   );

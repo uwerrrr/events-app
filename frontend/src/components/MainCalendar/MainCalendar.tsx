@@ -11,20 +11,30 @@ const MainCalendar = () => {
 
   return (
     <>
-      <section className={style["selection-section"]}>
-        <NavButton
-          direction={"previous"}
-          currViewDate={viewDate}
-          setViewDate={setViewDate}
-        />
-        <span className={style["month-text"]}>{viewDate.monthStr} </span>
-        <span className={style["year-text"]}>{viewDate.year}</span>
-        <NavButton
-          direction={"next"}
-          currViewDate={viewDate}
-          setViewDate={setViewDate}
-        />
-      </section>
+      <div className={style["calendar-head"]}>
+        <section className={style["month-year-section"]}>
+          <span className={style["month-text"]}>{viewDate.monthStr} </span>
+          <span className={style["year-text"]}>{viewDate.year}</span>
+        </section>
+
+        <section className={style["selection-section"]}>
+          <NavButton
+            type={"previous"}
+            currViewDate={viewDate}
+            setViewDate={setViewDate}
+          />
+          <NavButton
+            type={"today"}
+            currViewDate={viewDate}
+            setViewDate={setViewDate}
+          />
+          <NavButton
+            type={"next"}
+            currViewDate={viewDate}
+            setViewDate={setViewDate}
+          />
+        </section>
+      </div>
       <MonthGrid viewDate={viewDate} />
     </>
   );

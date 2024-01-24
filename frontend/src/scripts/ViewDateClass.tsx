@@ -37,6 +37,11 @@ class ViewDate {
     this.date.setMonth(this.month - 1);
     this.updateProperties();
   }
+
+  setToday() {
+    this.date = new Date();
+    this.updateProperties();
+  }
 }
 
 export default ViewDate;
