@@ -1,0 +1,19 @@
+@use "../../style/theme.scss";
+
+.button {
+  background-color: theme.$white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.4em 1em;
+  transition: border-color 0.25s;
+}
+.button:hover {
+  background-color: theme.$weekendBackground;
+  border: 1px solid transparent;
+}
+.button:active {
+  background-color: theme.$secondText;
+}

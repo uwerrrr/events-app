@@ -1,0 +1,20 @@
+.calendar-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.selection-section {
+}
+
+.month-text,
+.year-text {
+  font-size: 20px;
+}
+
+.month-text {
+  font-weight: bold;
+}
+
+.today-btn {
+}
