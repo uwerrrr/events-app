@@ -5,7 +5,7 @@
 ### Current status:
 
 - Finish <u>stage 1</u>: a frontend with interactive calendar interface is developed.
-- In <u>stage 2</u>: developing a backend that can store and allow user to create and delete events from calendar view
+- In <u>stage 2</u>: developing a feature to allow user to create and delete event from calendar view.
 
 ---
 
