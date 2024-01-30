@@ -7,6 +7,11 @@
 - Finish <u>stage 1</u>: a frontend with interactive calendar interface is developed.
 - In <u>stage 2</u>: developing a feature to allow user to create and delete event from calendar view.
 
+### Deployed version
+- You can access the project by following this [link](https://oscar-event-site.onrender.com).
+- The frontend, backend and database are deployed using render.com.
+- Please access the deployed version with Chromium-based browsers like Chrome for best experience.
+- !! Important: The backend is deployed with a free tier, so the initial load may take up to 2 minutes if it's waking up from sleep mode.
 ---
 
 ## Requirements / Purpose
