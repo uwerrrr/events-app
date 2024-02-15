@@ -18,7 +18,11 @@ const AddButton = () => {
       <button className={style["add-btn"]} onClick={openModal}>
         <FontAwesomeIcon icon={faPlus} />
       </button>
-      {showModal && createPortal(<CreateEventModal />, document.body)}
+      {showModal &&
+        createPortal(
+          <CreateEventModal setShowModal={setShowModal} />,
+          document.body
+        )}
     </>
   );
 };
