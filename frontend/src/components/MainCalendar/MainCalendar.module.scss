@@ -17,23 +17,3 @@
 .month-text {
   font-weight: bold;
 }
-
-.add-btn {
-  background-color: theme.$white;
-  font-weight: 500;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 0.4em 0.4em;
-  transition: border-color 0.25s;
-  margin-left: 0.4em;
-
-  @include theme.responsive-font-size(18px, 16px, 14px);
-}
-.add-btn:hover {
-  background-color: theme.$weekendBackground;
-  border: 1px solid transparent;
-}
-.add-btn:active {
-  background-color: theme.$secondText;
-}
