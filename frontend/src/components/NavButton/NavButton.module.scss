@@ -2,13 +2,14 @@
 
 .button {
   background-color: theme.$white;
-  font-size: 18px;
+
   font-weight: 500;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 0.4em 1em;
   transition: border-color 0.25s;
+  @include theme.responsive-font-size(20px, 16px, 14px);
 }
 .button:hover {
   background-color: theme.$weekendBackground;

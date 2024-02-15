@@ -15,3 +15,15 @@ $border: rgb(226, 226, 226);
     padding-right: 1vw;
   }
 }
+
+@mixin responsive-font-size($default-size, $medium-size, $small-size) {
+  font-size: $default-size;
+
+  @media (max-width: 768px) {
+    font-size: $medium-size;
+  }
+
+  @media (max-width: 480px) {
+    font-size: $small-size;
+  }
+}

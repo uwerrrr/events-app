@@ -1,5 +1,6 @@
 import style from "./DateCell.module.scss";
 import { isToday } from "../../../../scripts/myFunctions";
+import { useState } from "react";
 
 interface DateCellProps {
   date: "" | Date;
@@ -7,6 +8,7 @@ interface DateCellProps {
 
 const DateCell: React.FC<DateCellProps> = ({ date }) => {
   const dayOfWeek = date ? date.getDay() : undefined;
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div
@@ -19,6 +21,7 @@ const DateCell: React.FC<DateCellProps> = ({ date }) => {
     >
       <p className={date && isToday(date) ? style["today"] : ""}>
         {date && date.getDate()}
+        
       </p>
     </div>
   );
