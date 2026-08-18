@@ -6,8 +6,9 @@ const CalendarLoader = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional one-tick loading flash on mount
     setLoading(false);
-  });
+  }, []);
 
   return (
     <>
