@@ -19,7 +19,7 @@ const NavButton: React.FC<NavButtonProps> = ({
 }) => {
   // create newViewDate -> update newViewDate -> set viewDate state
   const handleButtonClick = () => {
-    let newViewDate = new ViewDate(new Date(currViewDate.date));
+    const newViewDate = new ViewDate(new Date(currViewDate.date));
     if (type === "next") {
       newViewDate.nextMonth();
     } else if (type === "previous") {
